@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		Funções de Data e Hora
+		<?php
+
+			date_default_timezone_set("America/Bahia");
+
+			$today = getdate();
+			echo ($today['mday']."/".$today['mon']."/".$today['year']);
+
+			echo("<br><br>");
+			$mes = date('n');
+
+			switch($mes) {
+
+				case 1:
+					$mes1 = "Janeiro";
+					$mes2 = "Jar";
+					break;
+
+				case 2:
+					$mes1 = "Fevereiro";
+					$mes2 = "Fev";
+					break;
+
+				case 3:
+					$mes1 = "Março";
+					$mes2 = "Mar";
+					break;
+
+				case 4:
+					$mes1 = "Abril";
+					$mes2 = "Abr";
+					break;
+
+				case 5:
+					$mes1 = "Maio";
+					$mes2 = "Mai";
+					break;
+
+				case 6:
+					$mes1 = "Junho";
+					$mes2 = "Jun";
+					break;
+
+				case 7:
+					$mes1 = "Julho";
+					$mes2 = "Jul";
+					break;
+
+				case 8:
+					$mes1 = "Agosto";
+					$mes2 = "Ago";
+					break;
+
+				case 9:
+					$mes1 = "Setembro";
+					$mes2 = "Set";
+					break;
+
+				case 10:
+					$mes1 = "Outubro";
+					$mes2 = "Out";
+					break;
+
+				case 11:
+					$mes1 = "Novembro";
+					$mes2 = "Nov";
+					break;
+
+				case 12:
+					$mes1 = "Dezembro";
+					$mes2 = "Dez";
+					break;
+
+			}
+
+			echo($today['mday']."-".$mes2."-".$today['year']);
+			echo("<br><br>");
+
+			switch($today['wday']){
+
+				case 0:
+	                $dia = "Domingo"; 
+	                break;
+	            case 1:
+	                $dia = "Segunda-feira"; 
+	                break;
+	            case 2:
+	                $dia = "Terça-feira"; 
+	                break;
+	            case 3:
+	                $dia = "Quarta-feira"; 
+	                break;
+	            case 4:
+	                $dia = "Quinta-feira"; 
+	                break;
+	            case 5:
+	                $dia = "Sexta-feira"; 
+	                break;
+	            case 6:
+	                $dia = "Sabado"; 
+	                break;
+			}
+
+			echo($dia.", ".$today['mday']." de ".$mes1." de ".$today['year']);
+			echo("<br><br>");
+
+			$mes3 = date('m');
+
+			echo($today['year']."-".$mes3."-".$today['mday']);
+
+			echo("<br><br>");
+
+			echo($today['hours']."h".$today['minutes']."m");
+
+			echo("<br><br>");
+
+			echo($today['hours'].":".$today['minutes'].":".$today['seconds']);	
+
+		?>
+
+	</div>
+</body>
+</html>
